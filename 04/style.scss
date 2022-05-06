@@ -1,0 +1,76 @@
+@use "sass:math";
+@use "sass:string";
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "sass:selector";
+
+// //sass:math
+// .el {
+//   width: math.div(100%, 2);
+// }
+// // @debug math.$pi;
+// // @debug math.abs(-10px);
+// // @debug math.compatible(10px, 1px);
+// // @debug math.unit(20rem);
+// // @debug math.is-unitless(20);
+
+// // //sass:string
+// // @debug string.to-lower-case("Bold"); // "bold"
+// // @debug string.unquote(".widget:hover"); // .widget:hover
+
+// //sass:color
+// // @debug color.mix(blue, red, 50);
+
+// // //sass:list
+// @debug ("--------sass:list--------");
+// @debug list.nth(11px 12px 16px, 2); // 12px
+// @debug list.append(10px 20px, 30px); // 10px 20px 30px
+
+// // //sass:map
+// $font-weights: (
+//   "regular": 400,
+//   "medium": 500,
+//   "bold": 700,
+// );
+// @debug ("--------sass:map--------");
+// @debug map.get($font-weights, "medium"); // 500
+// @debug map.has-key($font-weights, "medium");
+// @debug map.keys($font-weights);
+// @debug map.values($font-weights);
+
+// //sass:selector
+// @debug ("--------sass:selector--------");
+// @debug selector.is-superselector("a", "a.disabled"); // true
+// @debug selector.is-superselector("a.disabled", "a"); // false
+// @debug selector.is-superselector("a", ".sidebar a"); // true
+
+// @debug selector.append("a", ".disabled"); // a.disabled
+// @debug selector.nest(".alert, .warning", "p"); // .alert p, .warning p
+// @debug selector.replace("a.disabled", "a", "button"); // button.disabled
+// @debug selector.simple-selectors("a.disabled"); // a, .disabled
+// //sass:color
+@debug ("--------sass:color--------");
+@debug color.mix(blue, red, 50);
+
+@debug color.adjust(#d2e1dd, $red: -10, $blue: 10); // #c8e1e7
+
+@debug color.opacity(rgb(210, 225, 221, 0.4)); // 0.4
+
+@debug darken(#036, 30%); // black
+@debug color.scale(#036, $lightness: -30%); // #002447
+
+$adjust: color.adjust(hsl(30, 100%, 80%), $lightness: -25%);
+//hsl(29.9, 100%, 55%);
+
+$scale: color.scale(hsl(30, 100%, 80%), $lightness: -25%);
+//hsl(30, 100%, 60%);
+
+$change: color.change(hsl(30, 100%, 80%), $lightness: 25%);
+//hsl(30, 100%, 25%);
+
+body {
+  color: $adjust;
+  background-color: $scale;
+  border-color: $change;
+}

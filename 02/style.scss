@@ -1,0 +1,42 @@
+// @use "sass:map";
+
+// $font-weights: (
+//   "regular": 400,
+//   "medium": 500,
+//   "bold": 700,
+// );
+
+// @debug map.get($font-weights, "medium"); // 500
+// @debug map.get($font-weights, "extra-bold"); // null
+
+// $font-stack: Helvetica, sans-serif;
+// $primary-color: #333;
+
+// body {
+//   font: 100% $font-stack;
+//   color: $primary-color;
+// }
+// $prefix: fm-;
+// .#{$prefix}button {
+//   padding: 1rem;
+// }
+@mixin border($farbe: green) {
+  border: 2px solid $farbe;
+}
+.container {
+  @include border(blue);
+}
+.cont {
+  @include border();
+}
+
+@mixin mq($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+.container {
+  @include mq(400px) {
+    padding: 1rem;
+  }
+}

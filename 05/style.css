@@ -1,0 +1,11 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(255, 0, 0, 0.15);
+}
+
+.box {
+  background-color: #d63384;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

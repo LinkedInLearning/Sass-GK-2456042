@@ -1,0 +1,8 @@
+$border-color: #333 !default;
+$border-radius: 0.25rem !default;
+$box-shadow: 0 0.5rem 1rem rgba($border-color, 0.15) !default;
+
+.card {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}

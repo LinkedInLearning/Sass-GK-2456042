@@ -1,0 +1,15 @@
+.container {
+  border: 2px solid blue;
+}
+
+.cont {
+  border: 2px solid green;
+}
+
+@media (min-width: 400px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

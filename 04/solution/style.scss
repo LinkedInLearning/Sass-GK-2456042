@@ -1,0 +1,34 @@
+/*!
+  * Bootstrap v5.1.3 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors
+  * Copyright 2011-2021 Twitter, Inc.
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+
+@use "sass:list";
+@use "sass:meta";
+@use "sass:math";
+
+$enable-rounded: false;
+@function valid-radius($radius) {
+  $return: ();
+  @each $value in $radius {
+    @if meta.type-of($value) == number {
+      $return: list.append($return, math.max($value, 0));
+    } @else {
+      $return: list.append($return, $value);
+    }
+  }
+  @return $return;
+}
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded {
+    border-radius: valid-radius($radius);
+  } @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
+  }
+}
+//Bootstrap Ende
+div {
+  @include border-radius(20px, 1px);
+}

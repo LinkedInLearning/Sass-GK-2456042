@@ -1,0 +1,24 @@
+@use "sass:color";
+
+@function aufhellen($farbe, $wert) {
+  @return color.mix(white, $farbe, $wert);
+}
+
+@function abdunkeln($farbe, $wert) {
+  @return color.mix(black, $farbe, $wert);
+}
+
+@function farbeaendern($farbe, $wert) {
+  @if ($wert > 0) {
+    @return aufhellen($farbe, $wert);
+  } @else {
+    @return abdunkeln($farbe, -$wert);
+  }
+  //   @return if($wert > 0, aufhellen($farbe, $wert),
+  //              abdunkeln($farbe, -$wert));
+}
+.el {
+  background-color: aufhellen(red, 50);
+  color: abdunkeln(red, 50);
+  border-color: farbeaendern(green, 20);
+}

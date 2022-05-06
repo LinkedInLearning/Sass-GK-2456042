@@ -1,0 +1,129 @@
+.example {
+  background-color: blue;
+}
+
+.square-av {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.example {
+  width: 33.3333333333%;
+}
+
+.icon-40 {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.icon-50 {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-80 {
+  font-size: 80px;
+  height: 80px;
+  width: 80px;
+}
+
+.icon-100 {
+  font-size: 100px;
+  height: 100px;
+  width: 100px;
+}
+
+@media (min-width: 60em) {
+  .container {
+    margin: 1rem;
+  }
+}
+
+:root {
+  --red-dark: #990000;
+  --red: #ff0000;
+  --red-light: #ff6666;
+  --blue-dark: #000099;
+  --blue: #0000ff;
+  --blue-light: #6666ff;
+}
+
+.bg-red-dark {
+  background-color: #990000;
+}
+
+.bg-red-normal {
+  background-color: #ff0000;
+}
+
+.bg-red-light {
+  background-color: #ff6666;
+}
+
+.bg-blue-dark {
+  background-color: #000099;
+}
+
+.bg-blue-normal {
+  background-color: #0000ff;
+}
+
+.bg-blue-light {
+  background-color: #6666ff;
+}
+
+.col-1 {
+  flex: 0 0 20%;
+}
+
+.col-2 {
+  flex: 0 0 40%;
+}
+
+.col-3 {
+  flex: 0 0 60%;
+}
+
+.col-4 {
+  flex: 0 0 80%;
+}
+
+.col-5 {
+  flex: 0 0 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.el {
+  background-color: rgb(4, 22, 29);
+  color: white;
+}
+
+.error, .error--serious {
+  border: 1px solid #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+
+.problem {
+  border: 1px solid #f00;
+  background-color: #fdd;
+}
+.problem--serious {
+  border-width: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

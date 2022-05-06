@@ -1,0 +1,22 @@
+// @import "colors";
+// body {
+//   background-color: $white;
+//   color: $orange;
+// }
+
+@use "colors" as *;
+
+@use "cards" with (
+  $border-color: red,
+  $border-radius: 10px
+);
+@use "./basics";
+.box {
+  background-color: basics.$pink;
+  font-family: basics.$font-sans;
+}
+
+// body {
+//   background-color: $white;
+//   color: $orange;
+// }

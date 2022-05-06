@@ -1,0 +1,142 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:map";
+@use "sass:color";
+$warn: false;
+
+.example {
+  @if ($warn) {
+    background-color: orange;
+  } @else {
+    background-color: blue;
+  }
+}
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    border-radius: calc($size / 2);
+  }
+}
+
+.square-av {
+  @include avatar(100px);
+}
+.circle-av {
+  @include avatar(100px, $circle: true);
+}
+
+.example {
+  width: math.div(100%, 3);
+}
+//Listen
+$sizes: 40, 50, 80, 100;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: #{$size}px;
+    height: #{$size}px;
+    width: #{$size}px;
+  }
+}
+@debug list.nth($sizes, 2); // 50
+
+//Maps
+$breakpoints: (
+  small: 40em,
+  medium: 60em,
+  large: 80em,
+);
+@debug map.get($breakpoints, medium);
+
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+.container {
+  @include mq(medium) {
+    margin: 1rem;
+  }
+}
+
+$colors: (
+  red: (
+    dark: #990000,
+    normal: #ff0000,
+    light: #ff6666,
+  ),
+  blue: (
+    dark: #000099,
+    normal: #0000ff,
+    light: #6666ff,
+  ),
+);
+:root {
+  @each $color-key, $color-value in $colors {
+    @each $tone-key, $tone-value in $color-value {
+      @if ($tone-key == normal) {
+        --#{$color-key}: #{$tone-value};
+      } @else {
+        --#{$color-key}-#{$tone-key}: #{$tone-value};
+      }
+    }
+  }
+}
+@each $color-key, $color-value in $colors {
+  @each $tone-key, $tone-value in $color-value {
+    .bg-#{$color-key}-#{$tone-key} {
+      background-color: #{$tone-value};
+    }
+  }
+}
+
+//Schleife mit @for
+$col: 5;
+@for $i from 1 through $col {
+  .col-#{$i} {
+    flex: 0 0 calc((100% / $col) * $i);
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+//Funktionen
+
+$background: rgb(4, 22, 29);
+
+@function text($background) {
+  @if (color.lightness($background) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+.el {
+  background-color: $background;
+  color: text($background);
+}
+
+//@extend
+.error {
+  border: 1px solid #f00;
+  background-color: #fdd;
+
+  &--serious {
+    @extend .error;
+    border-width: 3px;
+  }
+}
+
+.problem {
+  border: 1px solid #f00;
+  background-color: #fdd;
+
+  &--serious {
+    border-width: 3px;
+  }
+}

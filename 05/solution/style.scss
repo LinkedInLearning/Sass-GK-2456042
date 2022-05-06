@@ -1,0 +1,7 @@
+@use "base" as b;
+@use "sass:color" as c;
+
+.zeile {
+  @include b.flex(row, space-between, stretch);
+  background-color: c.mix(red, blue, 40%);
+}
