@@ -1,10 +1,10 @@
-# [Sass-Grundkurs]
+# Sass-Grundkurs
 
-Dies ist das Repository für den **LinkedIn Learning** Kurs `[Sass-Grundkurs]`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
+Dies ist das Repository für den **LinkedIn Learning** Kurs `Sass-Grundkurs`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
 
 ![COURSENAME][lil-thumbnail-url] 
 
-[COURSEDESCRIPTION]
+Der CSS-Code in Webprojekten wird schnell unübersichtlich. Sass ist ein sogenannter CSS-Präprozessor und hilft Ihnen, CSS-Code schneller und effektiver zu schreiben. Dazu dienen Features wie Verzweigungen, Schleifen und selbst definierte Funktionen. Der Sass-Code wird dann kompiliert und CSS wird generiert. Sehen Sie, wie Sie zum Beispiel Variablen für immer wiederkehrende Werte definieren oder mit Mixins viele Zeilen Code sparen können. Mit Hilfe von Code-Challenges am Ende jeden Kapitels können Sie das Erlernte sofort testen und Ihre Lösung auch gleich mit der von Ihrer Trainerin Florence Maurice angebotenen Solution vergleichen.
 
 ## Anleitung
 
@@ -20,9 +20,9 @@ Der Kurs setzt auf DartSass und das dort definierte Modulsystem.
 
 ### Autor
 
-**[Florence Maurice]**
+**Florence Maurice**
 
-_[Trainerin und Autorin für Webtehmen]_
+_Trainerin und Autorin für Webtehmen_
 
 Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linkedin.com/learning/instructors/name_des_autors) an.
 
