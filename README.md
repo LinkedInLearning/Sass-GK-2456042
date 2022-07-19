@@ -24,10 +24,10 @@ Der Kurs setzt auf DartSass und das dort definierte Modulsystem.
 
 _Trainerin und Autorin für Webtehmen_
 
-Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linkedin.com/learning/instructors/name_des_autors) an.
+Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linkedin.com/learning/instructors/florence-maurice) an.
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
+[lil-course-url]: https://www.linkedin.com/learning/sass-grundkurs
+[lil-thumbnail-url]: https://media-exp1.licdn.com/dms/image/C4E0DAQHQOaAzK2dM0A/learning-public-crop_675_1200/0/1657776268468?e=1658818800&v=beta&t=lAU_u6fqwOXJ-HOXwrTeN3sxPZ624SWLfAlEg2f3L9w
 
 [1]: # (End of DE-Instruction ###############################################################################################)
