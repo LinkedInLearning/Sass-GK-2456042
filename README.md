@@ -28,6 +28,4 @@ Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linke
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/sass-grundkurs
-[lil-thumbnail-url]: https://media-exp1.licdn.com/dms/image/C4E0DAQHQOaAzK2dM0A/learning-public-crop_675_1200/0/1657776268468?e=1658818800&v=beta&t=lAU_u6fqwOXJ-HOXwrTeN3sxPZ624SWLfAlEg2f3L9w
-
-[1]: # (End of DE-Instruction ###############################################################################################)
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2456042/2456042-1657776256120-16x9.jpg
